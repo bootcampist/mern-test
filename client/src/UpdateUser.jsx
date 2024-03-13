@@ -10,8 +10,10 @@ function UpdateUser () {
     const [bio, setBio] = useState();
     const navigate = useNavigate()
 
+    axios.defaults.withCredentials = true;
+
     useEffect(()=> {
-        axios.get('http://localhost:3001/getUser/'+id)
+        axios.get('https://mern-test-mauve.vercel.app/getUser/'+id)
         .then(result => {console.log(result)
             setName(result.data.name)
             setEmail(result.data.email)
