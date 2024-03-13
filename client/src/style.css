@@ -1,0 +1,49 @@
+.container{
+    flex-wrap: wrap;
+}
+
+#container{
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    box-shadow: 0px 2px 8px 1px rgba(0,0,0,0.3);
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.email{
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.bio{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.update{
+    background-color: #8080cd;
+    color: white;
+}
+
+.update:hover {
+    background-color: #6d6dac;
+    color: white;
+}
