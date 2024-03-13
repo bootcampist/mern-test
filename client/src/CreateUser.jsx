@@ -8,11 +8,13 @@ function CreateUser () {
     const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [bio, setBio] = useState();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    axios.defaults.withCredentials = true;
 
     const Submit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:3001/createUser", {name, email, bio})
+        axios.post("https://mern-test-mauve.vercel.app/createUser", {name, email, bio})
         .then(result => {
             console.log(result)
             navigate('/')})
