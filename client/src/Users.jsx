@@ -9,13 +9,15 @@ function Users () {
     const [users, setUsers] = useState([]);
 
     useEffect(()=> {
-        axios.get('http://localhost:3001')
+        axios.get('https://mern-test-mauve.vercel.app')
         .then(result => setUsers(result.data))
         .catch(err => console.log(err))
     }, [users])
 
+    axios.defaults.withCredentials = true;
+
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3001/deleteUser/'+id)
+        axios.delete('https://mern-test-mauve.vercel.app/deleteUser/'+id)
         .then(res => console.log(res))
         .catch(error => console.log(error))
     }
