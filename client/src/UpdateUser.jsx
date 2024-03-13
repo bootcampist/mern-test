@@ -25,7 +25,7 @@ function UpdateUser () {
     const Update = (e) => {
         e.preventDefault();
         console.log(name, email, bio);
-        axios.put("http://localhost:3001/updateUser/"+id, {name, email, bio})
+        axios.put("https://mern-test-mauve.vercel.app/updateUser/"+id, {name, email, bio})
         .then(result => {
             console.log(result)
             navigate('/')})
